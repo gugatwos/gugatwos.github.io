@@ -1,0 +1,3 @@
+[submodule "gugatwos.io"]
+	path = gugatwos.io
+	url = https://github.com/gugatwos/gugatwos.io.git
