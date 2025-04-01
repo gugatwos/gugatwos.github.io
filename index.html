@@ -1,80 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <link rel="shortcut icon" type="image/x-icon" href="arcana.jpg">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> gugatwos's area</title>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-            background: url('background.png') no-repeat center center fixed;
-            background-size: cover;
-            color: #1031c7;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .grid-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto;
-            gap: 20px;
-            max-width: 80vw;
-            max-height: 80vh;
-        }
-        .box {
-            background: rgba(44, 44, 44, 0.94);
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            border-radius: 8px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center; /* Added to ensure text is horizontally centered */
-        }
-        h1 {
-            color: #ff79c6;
-        }
-        p {
-            color: #6cb2d9;
-            line-height: 1.6;
-        }
-        .highlight {
-            color: #50fa7b;
-        }
-        a {
-            color: #ff79c6;
-        }
-    </style>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gustavo Washington - Página Pessoal</title>
+
+  <style>
+    /* Remove margens/padding padrão e ocupa 100% da tela */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    /* BACKGROUND OCULTISTA & CIBERNÉTICO */
+    body {
+      /* Cor sólida base (fallback) */
+      background-color: #0c0c0c;
+      /* Gradiente escuro + SVG */
+      background-image:
+        linear-gradient(to bottom right, #949494, #5a5a5a, #313131, #000000),
+        url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iOTUiIHN0cm9rZT0iIzAwZmZjOCIgc3Ryb2tlLXdpZHRoPSIyIiBmaWxsPSJub25lIi8+CjxwYXRoIGQ9Ik0gMTAwLDQwIEwgMTQwLDEwMCBMIDEwMCwxNjAgTCA2MCwxMDAgWiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDBmZmM4IiBzdHJva2Utd2lkdGg9IjIiLz4KPHBhdGggZD0iTSA3Miw4MiBDIDgwLDcwIDEyMCw3MCAxMjgsODIgTSA3MiwxMTggQyA4MCwxMzAgMTIwLDEzMCAxMjgsMTE4IiBmaWxsPSJub25lIiBzdHJva2U9IiMwMGZmYzgiIHN0cm9rZS13aWR0aD0iMSIvPgo8L3N2Zz4=");
+      background-repeat: no-repeat, no-repeat;
+      /* Gradiente cobre a tela, SVG tem tamanho específico (300px) */
+      background-size: cover, 300px;
+      background-position: center, center;
+
+      /* Fonte e cor do texto */
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      color: #e0e0e0;
+
+      /* Deixamos o layout rolar naturalmente (sem flex centralizar tudo) */
+      display: block;
+    }
+
+    /* CONTAINER PRINCIPAL PARA TEXTO */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      /* Para dar melhor contraste, caso queira: 
+         background-color: rgba(0,0,0,0.5);
+         border-radius: 8px;
+      */
+      min-height: 100%; /* caso queira expandir até o fim da página */
+    }
+
+    header, section, footer {
+      margin-bottom: 2rem;
+    }
+
+    h1, h2 {
+      color: #ffcc00;
+      margin-bottom: 1rem;
+    }
+
+    a {
+      color: #ffcc00;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 1rem;
+      padding: 0.5rem 1rem;
+      background: #000000;
+      border-radius: 4px;
+      transition: background 0.3s;
+    }
+    .social-links a:hover {
+      background: #ffcc00;
+      color: #121212;
+    }
+
+    /* Responsividade básica para telas pequenas */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.4rem;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="box"><h1>Welcome!</h1></div>
-        <div class="box"><p>I'm <span class="highlight">Gustavo Washington</span>, a Junior Data Scientist, History's teacher, tarologist and a music producer.</p></div>
-        <div class="box"><p>I have a degree in History and am finishing my bachelor's degree in Data Science.</p></div>
-        <div class="box"><p>I have practical experience in data exploration, data pre-processing and data analysis. You can view some of my projects on my GitHub profile below.</p></div>
-        <div class="box"><p>I am passionate about History and everything that involves the construction of civilization over time. I like to think that I analyze historical facts to improve the present and future.</p></div>
-        <div class="box"><p>In addition to these two passions: Data and History. I also present myself as a music producer. I have a penchant for producing experimental electronic music that breaks through the superficiality of the commercial music market.</p></div>
-        <div class="box"><p>I am a tarot reader specializing in the cognition of singularity in the semiotics of subliminal stimuli in the inference of symbols, always seeking to channel the immaterial into the physical world. </p></div>
-        <div class="box">
-            <p>See my pages:</p>
-            <p>
-                <span style="margin: 0 10px;">|</span>
-                <a href="https://www.linkedin.com/in/gustavo-washington-98b19b21a/">LinkedIn</a>
-                <span style="margin: 0 10px;">|</span>
-                <a href="https://github.com/gugatwos">GitHub</a>
-                <span style="margin: 0 10px;">|</span>
-                <a href="https://www.instagram.com/tarotgugatwos/">Tarot's page</a>
-                <span style="margin: 0 10px;">|</span>
-                <a href="https://www.instagram.com/gugatwos/">Instagram</a>
-                <span style="margin: 0 10px;">|</span>
-                <a href="https://open.spotify.com/intl-pt/artist/0OG0FKsaGWUQLgZYikn25X?si=4jbXTxrDSKuMcF30oYv9DA">Spotify's page</a>
-            </p>
-        </div>
-    </div>
+  <div class="container">
+    <!-- TODO O SEU CONTEÚDO -->
+    <header>
+      <h1>Gustavo Washington</h1>
+      <p>Professor de História • Cientista de Dados • Produtor Musical • Tarólogo</p>
+    </header>
+
+    <section>
+      <h2>Bio</h2>
+      <p>
+        Sou professor e historiador especializado no Oriente Médio e em simbologia, desenvolvo estudos que interligam passado e presente, interpretando acontecimentos históricos e símbolos junto a reflexões condensadas no neoplatonismo, dialética Hegeliana e filosofia especulativa contemporânea. Meu interesse por narrativas antigas é direcionado à promoção de um conhecimento crítico, profundo e transformador, com foco em desvendar contextos complexos de maneira acessível e provocativa.
+        <p>
+        Na área de Ciência de Dados, atuo com Processamento de Linguagem Natural (PNL), Neural Link, Machine Learning, Deep Learning, Retrieval-Augmented Generation (RAG) e visualização interativa de dados. Meu objetivo é transformar informações brutas em insights valiosos, ampliando as conexões entre tecnologia digital e cognição humana. Desenvolvo soluções práticas e inovadoras que permitem uma compreensão mais profunda e dinâmica dos dados.
+        </p>
+      <p>
+        Sou tarólogo especializado no Tarot de Thoth, trabalho integrando os princípios esotéricos de Thelema à cibernética, criando pontes simbólicas entre conhecimentos ocultos e aplicações contemporâneas, como a neuromancia. Minhas leituras focam em revelar padrões arquetípicos e dinâmicas profundas da consciência humana, oferecendo orientações práticas e esclarecedoras.    
+        </p>
+      <p>
+        Como produtor musical, exploro elementos sonoros não convencionais, produzindo atmosferas capazes de induzir estados diferenciados de percepção. Cada composição é cuidadosamente elaborada para provocar reflexão e ampliar a experiência auditiva, criando uma esfera para exploração pessoal e intuitiva.
+    </p>
+    </section>
+
+    <section>
+      <h2>Conecte-se comigo</h2>
+      <div class="social-links">
+        <a href="https://www.instagram.com/gugatwos/" target="_blank">Instagram</a>
+        <a href="https://www.instagram.com/tarotgugatwos/" target="_blank">Tarot</a>
+        <a href="https://open.spotify.com/intl-pt/artist/0OG0FKsaGWUQLgZYikn25X?si=4jbXTxrDSKuMcF30oYv9DA" target="_blank">Spotify</a>
+        <a href="https://github.com/gugatwos" target="_blank">GitHub</a>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2025 Gustavo Washington. Todos os direitos reservados.</p>
+    </footer>
+  </div>
 </body>
 </html>
